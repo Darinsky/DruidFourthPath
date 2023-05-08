@@ -22,16 +22,56 @@ using Il2CppAssets.Scripts.Simulation.Towers;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Unity.UI_New.Coop;
 
+
+using BTD_Mod_Helper.Api;
+
+
+
+
+using PathsPlusPlus;
+
+
+
+
+
 [assembly: MelonInfo(typeof(Main), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 
 namespace FourthPath;
+[HarmonyPatch(typeof(Factory.__c__DisplayClass21_0), "_CreateAsync_b__0")]
+public class FactoryCreateAsync_Patch
+{
+    // I referenced Onixiya's SC2Expansion mod for this code, used to change the texture of druid lightning
+    [HarmonyPrefix]
+    public static bool Prefix(ref Factory.__c__DisplayClass21_0 __instance, ref UnityDisplayNode prototype)
+    {
+        if (__instance.objectId.guidRef.Split('-')[0] == "RedLightning")
+        {
+            GameObject go = new GameObject(__instance.objectId.guidRef);
+            go.transform.position = new Vector3(-3000f, 0f, 0f);
 
+            SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+            sr.sprite = ModContent.GetSprite<Main>(__instance.objectId.guidRef.Split('-')[1]);
+            // These are just values from the original lightning
+            sr.sortingGroupID = 1048575;
+            sr.sortingLayerID = -4022049;
+            sr.renderingLayerMask = 4294967295;
+
+            go.AddComponent<UnityDisplayNode>();
+            prototype = go.GetComponent<UnityDisplayNode>();
+
+            __instance.__4__this.active.Add(prototype);
+            __instance.onComplete.Invoke(prototype);
+            return false;
+        }
+        return true;
+    }
+}
 public partial class Main : BloonsTD6Mod
 
 {
-    
 
+   
 
     public override void OnWeaponFire(Weapon weapon) 
     {
