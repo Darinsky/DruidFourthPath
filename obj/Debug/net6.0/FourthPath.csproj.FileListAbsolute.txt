@@ -1,0 +1,12 @@
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.csproj.AssemblyReference.cache
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.AssemblyInfoInputs.cache
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.AssemblyInfo.cs
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.csproj.CoreCompileInputs.cache
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\bin\Debug\net6.0\FourthPath.deps.json
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\bin\Debug\net6.0\FourthPath.dll
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\bin\Debug\net6.0\PathsPlusPlus.dll
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.csproj.CopyComplete
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\FourthPath.dll
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\refint\FourthPath.dll
+C:\Users\Darinsky\Desktop\Mod Sources\FourthPath\obj\Debug\net6.0\ref\FourthPath.dll
