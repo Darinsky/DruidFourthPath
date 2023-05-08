@@ -15,7 +15,7 @@ using PathsPlusPlus;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
 
-
+using Il2CppAssets.Scripts.Models.Towers.Weapons;
 using Il2CppAssets.Scripts.Simulation.Towers;
 using Il2CppAssets.Scripts.Simulation.Towers.Behaviors;
 using DruidFourthPath.Displays;
@@ -162,16 +162,42 @@ public class FieryThorns : UpgradePlusPlus<DruidFourthPath>
             if (towerModel.appliedUpgrades.Contains(UpgradeType.HeartOfThunder))
             {
 
-               
 
-                var druid = Game.instance.model.GetTower(TowerType.Druid, 2);
-               
+                WeaponModel lightningWeapon = towerModel.GetAttackModel().weapons.First(w => w.name == "WeaponModel_Lightning");
+                ProjectileModel lightningProjectile = lightningWeapon.projectile;
+
+                CreateLightningEffectModel lightningEffect = new CreateLightningEffectModel("RedLightning", 0.3f,
+                new PrefabReference[]
+                {
+                    new PrefabReference() { guidRef = "RedLightning-LightningSmall1_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningSmall2_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningSmall3_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningMedium1_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningMedium2_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningMedium3_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningLarge1_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningLarge2_0" },
+                    new PrefabReference() { guidRef = "RedLightning-LightningLarge3_0" },
+                },
+                new float[]
+                {
+                    17.962965f,
+                    17.962965f,
+                    17.962965f,
+                    50.0000076f,
+                    50.0000076f,
+                    50.0000076f,
+                    85.18519f,
+                    85.18519f,
+                    85.18519f
+                });
+                
+                lightningProjectile.RemoveBehavior<CreateLightningEffectModel>();
+                lightningProjectile.AddBehavior(lightningEffect);
 
 
 
 
-
-                 
 
             }
         }
