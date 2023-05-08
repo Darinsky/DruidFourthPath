@@ -1,16 +1,8 @@
 <a href="https://github.com/GrahamKracker/FourthPath/releases/latest/download/FourthPath.dll">
     <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
 </a>
-<h1 align="center">Druid 4th Path</h1>
+<h1 align="center">FourthPath</h1>
 
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
-
-
-Now with: 
-- Arson :)
-- uhhh 500% more models
-- 10% more opness 
-- Probably some questionable balance decisions
-- Fully customizable so if you don't like something, or if something too expensive, well you can probably change it.
 
